@@ -1,5 +1,5 @@
-module.exports.index=(req,res)=>{
+module.exports = function(req,res){
     res.render("client/pages/home/index.pug",{
-        titlePage: "Home"
+        titlePage : "Trang chủ"
     })
 }

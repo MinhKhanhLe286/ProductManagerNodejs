@@ -1,8 +1,20 @@
 extends ../../layouts/default.pug
-//- Header
-block main 
-    h1 This is product Page
+include ../../mixins/box-head.pug
 
+block main
+    .container.my-3 
+        .row 
+            .col-12 
+                +box-head("Danh sach san phẩm")
 
+        .row 
+            .col-4.mb-3 
+                .product-item 
+                    .inner-image 
+                        img(src="https://image.anhducdigital.vn/apple/iphone/iphone-15-pro-15-pro-max/iphone-15-pro-max/iphone-15-pro-max-29-500x500.jpg", alt="Iphone 15 Promax")
 
-//- Footer
+                    .inner-content 
+                        h3.inner-title iphone 15 ProMax 
+                        .inner-price-new 1200$
+                        .inner-price-old 1600$
+                        .inner-discount -29%
