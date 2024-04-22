@@ -9,9 +9,11 @@ database.connect();
 const port = process.env.PORT
 
 const routerAdmin = require('./routers/admin/index.js')
-
-
 const routeClinet = require("./routers/clients/index.route.js");
+
+const system = require("./config/system.js");
+// setup local Variable;
+app.locals.prefixAdmin = system.prefix 
 
 routerAdmin(app);
 routeClinet(app);
