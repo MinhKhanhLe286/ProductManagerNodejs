@@ -9,12 +9,13 @@ block main
 
         .row 
             .col-4.mb-3 
-                .product-item 
-                    .inner-image 
-                        img(src="https://image.anhducdigital.vn/apple/iphone/iphone-15-pro-15-pro-max/iphone-15-pro-max/iphone-15-pro-max-29-500x500.jpg", alt="Iphone 15 Promax")
+                each item in products
+                    .product-item 
+                        .inner-image 
+                            img(src=item.thumbnail, alt=item.title)
 
-                    .inner-content 
-                        h3.inner-title iphone 15 ProMax 
-                        .inner-price-new 1200$
-                        .inner-price-old 1600$
-                        .inner-discount -29%
+                        .inner-content 
+                            h3.inner-title #{item.title}
+                            .inner-price-new 1200$
+                            .inner-price-old #{item.price} $
+                            .inner-discount #{item.discountPercentage} %

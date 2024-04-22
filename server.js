@@ -8,8 +8,15 @@ database.connect();
 
 const port = process.env.PORT
 
+const routerAdmin = require('./routers/admin/index.js')
+
+
 const routeClinet = require("./routers/clients/index.route.js");
+
+routerAdmin(app);
 routeClinet(app);
+
+
 
 app.set("views","views");
 app.set("view engine","pug");
